@@ -126,20 +126,6 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <EditText
-            android:id="@+id/etcolor"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="@color/colorSecundary"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.642"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/etreferencia" />
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
@@ -154,19 +140,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <EditText
-            android:id="@+id/ettipotalla"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="@color/colorSecundary"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/etcolor" />
 
         <TextView
             android:id="@+id/textView7"
@@ -189,11 +162,12 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:backgroundTint="@color/colorSecundary"
+            android:inputType="numberDecimal"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/ettipotalla"
-            android:inputType="numberDecimal"/>
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTalla" />
 
         <Button
             android:id="@+id/btnguardar"
@@ -218,13 +192,15 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="60dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/button_border_rounded"
             android:text="Listado Pedidos"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnguardar"
-            android:background="@drawable/button_border_rounded"
-            android:textColor="@color/colorPrimary"/>
+            app:layout_constraintTop_toBottomOf="@+id/btnguardar" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -239,6 +215,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="601dp" />
+
+        <Spinner
+            android:id="@+id/spinnerColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/etreferencia" />
+
+        <Spinner
+            android:id="@+id/spinnerTalla"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerColor" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
